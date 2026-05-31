@@ -14,6 +14,5 @@ export default function TabLayout() {
                     <Tab.Screen name="About" component={About} />
                     <Tab.Screen name="Profile" component={Setting} />
                 </Tab.Navigator>
-           
     );
 }
