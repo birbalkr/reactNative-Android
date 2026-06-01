@@ -14,12 +14,11 @@ const labels = ["Home", "Profile", "Add", "Settings"];
 export default function TabsUI({ state, navigation }) {
   return (
     <View
-      style={{
+      style={{  
         flexDirection: "row",
         height: 60,
-        backgroundColor: "#fff",
-        borderTopWidth: 1,
-        borderTopColor: "#ddd",
+        backgroundColor: "#000000",
+        // borderTopWidth: 1,
         marginBottom: 30,
         marginHorizontal: 20,
         borderRadius: 20,
@@ -34,6 +33,8 @@ export default function TabsUI({ state, navigation }) {
             onPress={() => navigation.navigate(route.name)}
             style={{
               flex: 1,
+              backgroundColor: isFocused ? "#4bc6dc" : "transparent",
+              borderRadius: 20,
               alignItems: "center",
               justifyContent: "center",
             }}
@@ -42,13 +43,13 @@ export default function TabsUI({ state, navigation }) {
             <Ionicons
               name={icons[index]}
               size={22}
-              color={isFocused ? "blue" : "gray"}
+              color={isFocused ? "#096575" : "#4bc6dc"}
             />
 
             {/* Label */}
             <Text
               style={{
-                color: isFocused ? "blue" : "gray",
+                color: isFocused ? "#096575" : "#4bc6dc",
                 fontSize: 12,
                 marginTop: 2,
               }}
